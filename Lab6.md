@@ -104,4 +104,30 @@ Learn how to securely manage application secrets such as database credentials, A
    - Test the Lambda function by invoking it to retrieve the stored secret.
    - The function should output the secret's value in the response.
 
-2
+2. **Automatic Rotation:**
+   - Confirm that automatic rotation is working by reviewing the secret’s rotation history in the Secrets Manager console.
+   - Check that the old secret is updated with a new value after rotation.
+
+---
+
+## Clean Up:
+
+1. **Delete the Lambda Function:**
+   - Go to the Lambda console, select the `AccessSecretsFunction`, and delete it.
+
+2. **Delete the Secret:**
+   - In the Secrets Manager console, select your secret (`MyDatabaseCredentials`) and choose **Delete secret**.
+   - Optionally, set a recovery window if you want the secret to be recoverable for a certain number of days.
+
+3. **Remove IAM Permissions:**
+   - If you created a custom IAM role for Lambda, go to the IAM console and delete the role.
+
+---
+
+## Key Learning Points:
+
+- **AWS Secrets Manager:** How to securely store and manage secrets like API keys, database credentials, and encryption keys.
+- **Lambda Integration:** How to access secrets programmatically using AWS Lambda and securely retrieve sensitive information.
+- **Automatic Rotation:** The importance of automatic secret rotation and how to enable it for continuous security updates.
+
+---
