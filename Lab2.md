@@ -87,4 +87,24 @@ Configure AWS CloudTrail for auditing and logging purposes. Understand how to us
 
 ---
 
-## Clean Up
+## Clean Up:
+
+- **Disable/Delete CloudTrail Trail:**
+   - If you no longer need the trail, navigate to the CloudTrail console, select your trail, and click **Delete**.
+   
+- **Remove S3 Bucket and Logs:**
+   - If you created a new S3 bucket, delete it by navigating to the **S3 console**, selecting the bucket, and choosing **Delete**.
+
+- **Delete the CloudWatch Alarm and Metric Filter:**
+   - Go to the **CloudWatch Console**, find the alarm you created, and delete it.
+   - Also, remove the metric filter from the CloudWatch Logs if it’s no longer needed.
+
+---
+
+## Key Learning Points:
+
+- **CloudTrail:** How to set up CloudTrail to log AWS API events and ensure data is available for auditing.
+- **CloudWatch Alarms:** How to monitor specific events, such as failed login attempts, using CloudWatch Logs and alarms.
+- **S3 Data Event Logging:** How to track detailed S3 object-level operations for better insight into security-related activities.
+
+---
